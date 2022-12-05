@@ -10,11 +10,11 @@
 &nbsp;
 <ul class="nav nav-pills">
 <li class="nav-item">
-<a class="nav-link" aria-current="page" href="{% url 'add_artist' %}"> Add New Artist</a>
+<a class="nav-link" aria-current="page" href="{% url 'add_artist' %}">Add New Artist</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="#">Add New Song</a>
+<a class="nav-link" href="{% url 'add_song' %} ">Add New Song</a>
 </li>
 </ul>
 
@@ -44,6 +44,7 @@
 <td>
 <a href="artist-details/{{artist.id}}" class="btn btn btn-success" type="button"><i class="bi bi-pencil"></i></a>
 <a href="artist-delete/{{artist.id}}" class="btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"><i class="bi bi-trash"></i></a>
+<a class="nav-link" href="{% url 'artist_details' %} ">Details of Artist</a>
 </td>
 </tr>
 
@@ -60,6 +61,7 @@ Are you sure you want to delete {{artist.name}} ?
 <div class="modal-footer">
 <a href="artist-delete/{{artist.id}}" type="button" class="btn btn-primary">Yes</a>
 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+<a class="nav-link" href="{% url 'delete_artist' %} ">Deleting Artist</a>
 </div>
 </div>
 </div>
